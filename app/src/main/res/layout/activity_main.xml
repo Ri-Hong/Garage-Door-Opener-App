@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#323232">
+
+
+    <View
+        android:id="@+id/dividerTitle"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:text="Garage Door Opener"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/dividerTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/dividerTitle"
+        app:layout_constraintTop_toTopOf="@+id/dividerTitle" />
+
+
+    <TextView
+        android:id="@+id/tvConnectionMsg"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:backgroundTint="#FFFFFF"
+        android:textAlignment="center"
+        android:textColor="#EEEEEE"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/dividerTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <View
+        android:id="@+id/dividerGap6"
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+
+        android:background="#FFC107"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dividerTitle" />
+
+
+    ----------
+
+
+    <View
+        android:id="@+id/dividerOpenClose"
+        android:layout_width="0dp"
+        android:layout_height="250dp"
+
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dividerGap6" />
+
+    <Button
+        android:id="@+id/btnOpenClose1"
+        android:layout_width="160dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:background="#7D7D7D"
+        android:capitalize="none"
+        android:outlineSpotShadowColor="#E91E63"
+        android:text="READY"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/tvAckLabel"
+        app:layout_constraintEnd_toStartOf="@+id/btnOpenClose2"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvHeartbeatLabel"
+        app:layout_constraintVertical_bias="0.529" />
+
+    <Button
+        android:id="@+id/btnOpenClose2"
+        android:layout_width="160dp"
+        android:layout_height="100dp"
+        android:layout_marginEnd="36dp"
+        android:layout_marginRight="36dp"
+        android:background="#7D7D7D"
+        android:capitalize="none"
+        android:outlineSpotShadowColor="#E91E63"
+        android:text="GO"
+        android:textAllCaps="false"
+        android:textColor="#FBFBFB"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/btnOpenClose1"
+        app:layout_constraintEnd_toEndOf="@+id/dividerOpenClose"
+        app:layout_constraintTop_toTopOf="@+id/btnOpenClose1"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/tvInstruction1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center|left"
+        android:outlineAmbientShadowColor="#FFEB3B"
+        android:outlineSpotShadowColor="#E91E63"
+        android:text='Press "READY", then "GO"'
+        android:textColor="#535555"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnOpenClose1"
+        app:layout_constraintEnd_toEndOf="@+id/btnOpenClose2"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/btnOpenClose1" />
+
+    <TextView
+        android:id="@+id/tvClock"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:gravity="center|left"
+        android:textAlignment="viewEnd"
+        android:textColor="#ffffff"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/tvIpAddress"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tvIpAddress"
+        android:layout_width="150dp"
+        android:layout_height="0dp"
+        android:gravity="right|center_vertical"
+        android:textAlignment="viewEnd"
+        android:textColor="#ffffff"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/tvClock"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tvClock" />
+
+    <TextView
+        android:id="@+id/tvRequestLabel"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:gravity="center|left"
+        android:text="REQ Sent:"
+        android:textColor="#A5A5A5"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/tvAckLabel"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tvRequest"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center|left"
+        android:textColor="#A5A5A5"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvRequestLabel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/tvAckLabel"
+        app:layout_constraintTop_toTopOf="@+id/tvRequestLabel" />
+
+    <TextView
+        android:id="@+id/tvAckLabel"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:gravity="center|left"
+        android:text="ACK Rcvd:"
+        android:textColor="#A5A5A5"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/dividerOpenClose"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tvAck"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center|left"
+        android:textColor="#A5A5A5"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvAckLabel"
+        app:layout_constraintTop_toTopOf="@+id/tvAckLabel" />
+
+    <TextView
+        android:id="@+id/tvHeartbeatLabel"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:gravity="center|left"
+        android:outlineAmbientShadowColor="#FFEB3B"
+        android:outlineSpotShadowColor="#E91E63"
+        android:text="Heartbeat:"
+        android:textColor="#A5A5A5"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/dividerOpenClose" />
+
+    <TextView
+        android:id="@+id/tvHeartbeat"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center|left"
+        android:outlineAmbientShadowColor="#FFEB3B"
+        android:outlineSpotShadowColor="#E91E63"
+        android:textColor="#A5A5A5"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/tvHeartbeatLabel"
+        app:layout_constraintTop_toTopOf="@+id/tvHeartbeatLabel" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
